@@ -1,0 +1,422 @@
+.bg-color-black {
+  background-color: black !important;
+}
+
+.bg-color-red {
+  background-color: red !important;
+}
+
+.bg-color-blue {
+  background-color: blue !important;
+}
+
+.bg-color-grey {
+  background-color: grey !important;
+}
+
+.bg-color-blueviolet {
+  background-color: blueviolet !important;
+}
+
+.bg-color-cadetblue {
+  background-color: cadetblue !important;
+}
+
+.bg-color-crimson {
+  background-color: crimson !important;
+}
+
+.bg-color-type-2 {
+  background-color: #F7C331 !important;
+}
+
+.bg-color-type-3 {
+  background-color: #001646 !important;
+}
+
+.bg-color-type-4 {
+  background-color: #00944e !important;
+}
+
+.bg-color-type-5 {
+  background-color: #544641 !important;
+}
+
+.bg-color-type-6 {
+  background-color: #c59d6c !important;
+}
+
+.bg-color-type-7 {
+  background-color: #9e035c !important;
+}
+
+.bg-color-type-8 {
+  background-color: #ed1e79 !important;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  color: black;
+}
+
+.containerDiv {
+  margin: auto;
+  height: 100vh;
+  width: 900px;
+  margin: auto;
+}
+
+.subcontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.step {
+  width: 100%;
+  max-width: 40px;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  display: none;
+  position: relative;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.step.active {
+  width: 100%;
+  max-width: 992px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.step.active .atrium {
+  background-color: white;
+  color: black;
+  border-color: 1px solid black;
+}
+
+.step.active .atrium::after {
+  background-image: url(../images/minus-solid.svg);
+}
+
+.step.active .atrium span {
+  color: black;
+}
+
+.step.passive {
+  width: 47px;
+  padding-right: 40px;
+  display: block;
+  overflow: hidden;
+}
+
+.step.passive .atrium {
+  border-right-color: white;
+}
+
+.step .atrium {
+  width: 40px;
+  height: 100%;
+  padding: 6px 12px;
+  color: white;
+  background-color: black;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border: 1px solid black;
+  position: relative;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  height: 100%;
+}
+
+.step .atrium::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/plus-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.step .atrium span {
+  min-width: 200px;
+  font-family: "Mont-Medium";
+  font-size: 14px;
+  color: white;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.content .moreThenOne {
+  margin: 15px 15px;
+  border-radius: 3px;
+}
+
+.content .moreThenOne img {
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  width: 200px;
+  cursor: pointer;
+  border: 1px solid #969595;
+}
+
+.content .moreThenOne img:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.content .moreThenOne .price {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #969595;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 20px;
+  border-radius: 3px;
+}
+
+.content .moreThenOne .price .subPrice {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.content .moreThenOne .iconClass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.content .moreThenOne .iconClass i {
+  cursor: pointer;
+}
+
+.content .moreThenOne .iconClass .fa-video {
+  margin-left: 8px;
+}
+
+.step-2 .dimensions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 25px auto;
+}
+
+.step-2 .dimensions .subDim {
+  border: 1px solid #969595;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.step-2 .dimensions .subDim:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.step-2 .dimensions .subDim p {
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.next .nextButton .button {
+  background-color: #F7C331;
+  border-color: #F7C331;
+  color: white;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  outline: none !important;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.next .nextButton .button:hover, .next .nextButton .button:active, .next .nextButton .button:focus {
+  background-color: rgba(247, 195, 49, 0.8);
+  border-color: rgba(247, 195, 49, 0.8);
+}
+
+.next .totalPrice {
+  border: 1px solid #969595;
+  width: 150px;
+  margin-left: 10px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 3px;
+}
+
+.next .totalPrice p {
+  font-weight: 600;
+}
+
+.preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.preview h5 {
+  margin-top: 20px;
+}
+
+.preview .preview-img img {
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.step-4 .content .moreThenOne {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.step-4 .content .moreThenOne img {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  cursor: pointer;
+  border: 1px solid #969595;
+}
+
+.step-4 .content .moreThenOne img:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.step-4 .content .moreThenOne .price {
+  width: 200px;
+}
+/*# sourceMappingURL=style.css.map */
